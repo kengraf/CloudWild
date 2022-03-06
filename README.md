@@ -12,8 +12,12 @@ Credit for where I started [template example](https://bl.ocks.org/magnetikonline
 - AWS cloudshell
 - git clone <this-repo>
   
-### CloudFormation command
+### CloudFormation command  
+
 ```
-  aws cloudformation create-stack --stack-name cloudwild --template-body file://stack.yaml
+aws cloudformation deploy --template-file stack.yaml --stack-name cloudwild  --capabilities CAPABILITY_NAMED_IAM
 ```
-  
+
+### Validate
+URL=
+curl -X POST $URL
