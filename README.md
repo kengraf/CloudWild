@@ -12,12 +12,14 @@ Credit for where I started [template example](https://bl.ocks.org/magnetikonline
 - AWS cloudshell
 - git clone <this-repo>
   
-### CloudFormation command  
+### CloudFormation
+Deploy 
 
 ```
 aws cloudformation deploy --template-file stack.yaml --stack-name cloudwild  --capabilities CAPABILITY_NAMED_IAM
 ```
 
 ### Validate
-URL=
+APIID=aws apigateway get-rest-apis --output text --query "items[?name=='my-api'].id"`
+URL="https://${APIID}.execute-api.${AWS_REGION}.amazonaws.com/call"
 curl -X POST $URL
