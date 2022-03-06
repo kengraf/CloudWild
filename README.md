@@ -8,4 +8,12 @@ Credit for where I started [template example](https://bl.ocks.org/magnetikonline
 - API Gateway to call Lambda via POST.
 - Lambda that echos user's IP address.
 
-CloudFormation command
+### Setup
+- AWS cloudshell
+- git clone <this-repo>
+  
+### CloudFormation command
+```
+  aws cloudformation create-stack --stack-name cloudwild --template-body file://stack.yaml
+```
+  
