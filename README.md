@@ -10,20 +10,21 @@ Credit for where I started [template example](https://bl.ocks.org/magnetikonline
 -Lambda that echos user's IP address.
 
 ### Setup
-AWS cloudshell
-git clone 'repo URL'
+-Active AWS Cloudshell session
+-git clone https://github.com/kengraf/CloudWild.git
   
 ### CloudFormation
 Deploy command will create the following:
-AWS::ApiGateway::RestApi
-AWS::ApiGateway::Deployment
-AWS::ApiGateway::Method
-AWS::Lambda::Permission
-AWS::Lambda::Function
-AWS::IAM::Role
-AWS::Logs::LogGroup	
+-AWS::ApiGateway::RestApi
+-AWS::ApiGateway::Deployment
+-AWS::ApiGateway::Method
+-AWS::Lambda::Permission
+-AWS::Lambda::Function
+-AWS::IAM::Role
+-AWS::Logs::LogGroup	
 
 ```
+cd CloudWild
 aws cloudformation deploy --template-file stack.yaml --stack-name cloudwild  --capabilities CAPABILITY_NAMED_IAM
 ```
 
