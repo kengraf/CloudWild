@@ -11,7 +11,7 @@ Parameters:
     Default: call
   apiGatewayHTTPMethod:
     Type: String
-    Default: GET
+    Default: POST
   lambdaFunctionName:
     Type: String
     AllowedPattern: "[a-zA-Z0-9]+[a-zA-Z0-9-]+[a-zA-Z0-9]+"
