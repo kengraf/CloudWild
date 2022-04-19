@@ -29,10 +29,11 @@ aws cloudformation deploy --template-file stack.yaml --stack-name cloudwild  --c
 ```
 
 ### Validate
-APIID=aws apigateway get-rest-apis --output text --query "items[?name=='my-api'].id"`
+```
+APIID=`aws apigateway get-rest-apis --output text --query "items[?name=='my-api'].id"`
 URL="https://${APIID}.execute-api.${AWS_REGION}.amazonaws.com/call"
 curl -X POST $URL
-  
+```  
 ### Clean up
 ```
 aws cloudformation delete-stack --stack-name cloudwild
